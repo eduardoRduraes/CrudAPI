@@ -3539,19 +3539,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\iorana\\.nuget\\packages\\": {}
+    "C:\\Users\\Edu_o\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\iorana\\RiderProjects\\CrudAPI\\CrudAPI.csproj",
+      "projectUniqueName": "D:\\riderProject\\CrudAPI\\CrudAPI.csproj",
       "projectName": "CrudAPI",
-      "projectPath": "C:\\Users\\iorana\\RiderProjects\\CrudAPI\\CrudAPI.csproj",
-      "packagesPath": "C:\\Users\\iorana\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\iorana\\RiderProjects\\CrudAPI\\obj\\",
+      "projectPath": "D:\\riderProject\\CrudAPI\\CrudAPI.csproj",
+      "packagesPath": "C:\\Users\\Edu_o\\.nuget\\packages\\",
+      "outputPath": "D:\\riderProject\\CrudAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\iorana\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Edu_o\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
@@ -3575,7 +3575,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.200"
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net9.0": {
@@ -3623,7 +3623,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -32,7 +32,9 @@ public class CasoController : ControllerBase
     [HttpDelete("delete/{id}")]
     public async Task<IActionResult> Delete(Guid id)
     {
-        await _repository.Get(id);
+        var data = await _repository.Get(id);
+        if (data != null)
+            await _repository.Delete(data);
         return Ok(new { message = $"Caso deletado com sucesso! {id}" });
     }
 }

@@ -22,8 +22,9 @@ public class CasoRepository
     }
 
     public async Task<Caso> Get(Guid id)
-    {
-        return await _context.Casos.FindAsync(id);
+    { 
+       var caso = await _context.Casos.FindAsync(id);
+       return caso;
     }
 
     public async Task Delete(Caso data)

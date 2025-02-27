@@ -1,5 +1,6 @@
 ﻿using CrudAPI.Data;
 using CrudAPI.DTOs;
+using CrudAPI.Etc;
 using CrudAPI.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -16,7 +17,7 @@ public class OngRepository
 
     public async Task Add(OngDTO data)
     {
-        var ong = new Ong(Guid.Empty, data.Nome, data.Email, data.WhatsApp, data.Cidade, data.Estado);
+        var ong = new Ong(Guid.Empty, data.Nome, data.Email, data.Password, data.WhatsApp, data.Cidade, data.Estado);
         await _context.Ongs.AddAsync(ong);
         await _context.SaveChangesAsync();
     }
@@ -27,5 +28,11 @@ public class OngRepository
             .Include(o => o.Casos)
                 .FirstOrDefaultAsync(o => o.Id == ongId);
         return ongs;
+    }
+
+    public async Task<Ong> GetIdEmail(String email, string password)
+    {
+        var ong = await _context.Ongs.FirstOrDefaultAsync(o => o.Email == email && o.Password == password);
+        return ong;
     }
 }

@@ -1,10 +1,12 @@
 ﻿using CrudAPI.DTOs;
 using CrudAPI.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CrudAPI.Controllers;
 
 [ApiController]
+[Authorize]
 [Route("[controller]")]
 public class CasoController : ControllerBase
 {

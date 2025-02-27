@@ -66,6 +66,10 @@ namespace CrudAPI.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("WhatsApp")
                         .IsRequired()
                         .HasColumnType("TEXT");

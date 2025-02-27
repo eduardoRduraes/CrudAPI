@@ -1,5 +1,4 @@
 ﻿using CrudAPI.DTOs;
-using CrudAPI.Models;
 using CrudAPI.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
@@ -30,3 +29,4 @@ public class OngController : ControllerBase
         return Ok(ong);
     }
 }
+

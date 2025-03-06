@@ -1,7 +1,7 @@
 ﻿using System.Security.Cryptography;
 using System.Text;
 
-namespace CrudAPI.Etc;
+namespace CrudAPI.Util;
 
 public class SecureRandomStringGenerator
 {

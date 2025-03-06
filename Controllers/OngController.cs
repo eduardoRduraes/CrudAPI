@@ -18,6 +18,7 @@ public class OngController : ControllerBase
     [HttpPost("add")]
     public async Task<IActionResult> Add([FromBody]OngDTO data)
     {
+        
         await _ongRepository.Add(data);
         return Ok(new { message = $"Ong cadastrado com sucesso! {data.Nome}" });
     }

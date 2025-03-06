@@ -473,3 +473,4 @@ D:\rider-project\CrudAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
 D:\rider-project\CrudAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 D:\rider-project\CrudAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
 D:\rider-project\CrudAPI\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
+D:\rider-project\CrudAPI\bin\Debug\net9.0\BCrypt.Net-Next.dll

@@ -3,7 +3,7 @@ using System.Security.Claims;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
 
-namespace CrudAPI.Etc;
+namespace CrudAPI.Util;
 
 public class AuthService
 {
@@ -41,4 +41,6 @@ public class AuthService
         var token = tokenHandler.CreateToken(tokenDescriptor);
         return tokenHandler.WriteToken(token);
     }
+    
+    
 }

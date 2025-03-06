@@ -1,4 +1,5 @@
 ﻿using CrudAPI.DTOs;
+using CrudAPI.Util;
 using CrudAPI.Repositories;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -11,10 +12,12 @@ namespace CrudAPI.Controllers;
 public class CasoController : ControllerBase
 {
     private readonly CasoRepository _repository;
+    private readonly TokenService _tokenService;
 
-    public CasoController(CasoRepository repository)
+    public CasoController(CasoRepository repository, TokenService tokenService)
     {
         _repository = repository;
+        _tokenService = tokenService;
     }
 
     [HttpPost("add")]

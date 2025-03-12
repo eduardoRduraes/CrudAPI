@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\rider-project\\CrudAPI\\CrudAPI.csproj": {}
+    "D:\\riderProject\\CrudAPI\\CrudAPI.csproj": {}
   },
   "projects": {
-    "D:\\rider-project\\CrudAPI\\CrudAPI.csproj": {
+    "D:\\riderProject\\CrudAPI\\CrudAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\rider-project\\CrudAPI\\CrudAPI.csproj",
+        "projectUniqueName": "D:\\riderProject\\CrudAPI\\CrudAPI.csproj",
         "projectName": "CrudAPI",
-        "projectPath": "D:\\rider-project\\CrudAPI\\CrudAPI.csproj",
+        "projectPath": "D:\\riderProject\\CrudAPI\\CrudAPI.csproj",
         "packagesPath": "C:\\Users\\Edu_o\\.nuget\\packages\\",
-        "outputPath": "D:\\rider-project\\CrudAPI\\obj\\",
+        "outputPath": "D:\\riderProject\\CrudAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Edu_o\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -2,7 +2,7 @@
 
 namespace CrudAPI.Util;
 
-public class PasswordService
+public class PasswordHash
 {
     public string HashPassword(string password)
     {

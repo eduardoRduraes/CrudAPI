@@ -5,14 +5,14 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace CrudAPI.Util;
 
-public class AuthService
+public class Auth
 {
     private readonly string _secretKey;
     private readonly string _issuer;
     private readonly string _audience;
     private readonly int _expirationMinutes;
 
-    public AuthService(IConfiguration config)
+    public Auth(IConfiguration config)
     {
         _secretKey = config["JwtSettings:SecretKey"];
         _issuer = config["JwtSettings:Issuer"];

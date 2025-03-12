@@ -9,19 +9,15 @@ namespace CrudAPI.Repositories;
 public class OngRepository
 {
     private readonly AppDataContext _context;
-    private readonly PasswordService _passwordService;
 
-    public OngRepository(AppDataContext context, PasswordService passwordService)
+    public OngRepository(AppDataContext context)
     {
         _context = context;
-        _passwordService = passwordService;
     }
 
-    public async Task Add(OngDTO data)
+    public async Task Add(Ong data)
     {
-        data.Password = _passwordService.HashPassword(data.Password);
-        var ong = new Ong(Guid.Empty, data.Nome, data.Email, data.Password, data.WhatsApp, data.Cidade, data.Estado);
-        await _context.Ongs.AddAsync(ong);
+        await _context.Ongs.AddAsync(data);
         await _context.SaveChangesAsync();
     }
 
@@ -33,7 +29,7 @@ public class OngRepository
         return ongs;
     }
 
-    public async Task<Ong> GetEmail(String email)
+    public async Task<Ong> GetEmail(string email)
     {
         var ong = await _context.Ongs.FirstOrDefaultAsync(o => o.Email == email);
         return ong;

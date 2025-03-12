@@ -1,5 +1,5 @@
 ﻿using CrudAPI.DTOs;
-using CrudAPI.Repositories;
+using CrudAPI.Services;
 using CrudAPI.Util;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,31 +8,21 @@ namespace CrudAPI.Controllers;
 [Route("/api/auth")]
 public class LoginController :ControllerBase
 {
-    private readonly OngRepository _ongRepository;
-    private readonly AuthService _authService;
-    private readonly PasswordService _passwordService;
+    private readonly LoginService _loginService;
+    private readonly Auth _auth;
     
-    public LoginController(OngRepository ongRepository, AuthService authService, PasswordService passwordService)
+    public LoginController(LoginService loginService, Auth auth)
     {
-        _ongRepository = ongRepository;
-        _authService = authService;
-        _passwordService = passwordService;
+        _loginService = loginService;
+        _auth = auth;
     }
     
     [HttpPost("login")]
     public async Task<IActionResult> Login([FromBody] LoginOngDTO request)
     {
-        var ong = await _ongRepository.GetEmail(request.Email);
+        var ong = await _loginService.Login(request);
         
-        if(ong == null)
-            return Unauthorized(new { message = "Email or password is incorrect" });
-        
-        var passwordVerify = _passwordService.VerifyPassword(request.Password, ong.Password);
-        
-        if (!passwordVerify)
-            return Unauthorized(new { message = "Email or password is incorrect" });
-
-        var token = _authService.GenerateToken(ong.Id);
+       var token = _auth.GenerateToken(ong.Id);
         
         Response.Cookies.Append("token", token, new CookieOptions
         {
@@ -48,7 +38,16 @@ public class LoginController :ControllerBase
     [HttpPost("logout")]
     public IActionResult Logout()
     {
-        Response.Cookies.Delete("token");
+        // Remove o cookie de autenticação
+        Response.Cookies.Delete("token", new CookieOptions
+        {
+            HttpOnly = true,  // Impede acesso via JavaScript
+            Secure = true,    // Garante que só seja enviado via HTTPS
+            SameSite = SameSiteMode.Strict, // Evita envio do cookie para domínios externos
+        });
+
+        // Retorna uma resposta indicando que o logout foi bem-sucedido
         return Ok(new { message = "Logout successful" });
     }
+
 }

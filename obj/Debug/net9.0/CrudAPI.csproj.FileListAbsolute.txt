@@ -474,3 +474,13 @@ D:\rider-project\CrudAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.Open
 D:\rider-project\CrudAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
 D:\rider-project\CrudAPI\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
 D:\rider-project\CrudAPI\bin\Debug\net9.0\BCrypt.Net-Next.dll
+D:\riderProject\CrudAPI\bin\Debug\net9.0\BCrypt.Net-Next.dll
+D:\riderProject\CrudAPI\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\riderProject\CrudAPI\bin\Debug\net9.0\Microsoft.Extensions.Configuration.dll
+D:\riderProject\CrudAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+D:\riderProject\CrudAPI\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\riderProject\CrudAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+D:\riderProject\CrudAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+D:\riderProject\CrudAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\riderProject\CrudAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+D:\riderProject\CrudAPI\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll

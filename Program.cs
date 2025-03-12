@@ -3,6 +3,7 @@ using System.Text.Json.Serialization;
 using CrudAPI.Data;
 using CrudAPI.Util;
 using CrudAPI.Repositories;
+using CrudAPI.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -50,9 +51,12 @@ builder.Services.AddDbContext<AppDataContext>(
 
 builder.Services.AddScoped<OngRepository>();
 builder.Services.AddScoped<CasoRepository>();
-builder.Services.AddScoped<AuthService>();
-builder.Services.AddScoped<TokenService>();
-builder.Services.AddScoped<PasswordService>();
+builder.Services.AddScoped<Auth>();
+builder.Services.AddScoped<TokenGenerate>();
+builder.Services.AddScoped<PasswordHash>();
+builder.Services.AddScoped<OngService>();
+builder.Services.AddScoped<CasoService>();
+builder.Services.AddScoped<LoginService>();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
@@ -98,5 +102,6 @@ app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
 
+app.UseMiddleware<ErrorHandlingMiddleware>();
 app.Run();
 

@@ -1,5 +1,4 @@
 ﻿using CrudAPI.Data;
-using CrudAPI.DTOs;
 using CrudAPI.Models;
 
 namespace CrudAPI.Repositories;
@@ -13,10 +12,10 @@ public class CasoRepository
         _context = context;
     }
 
-    public async Task Add(CasoDTO data)
+    public async Task Add(Caso data)
     {
-        var caso = new Caso(Guid.Empty, data.Titulo, data.Descricao, data.Valor, data.OngId);
-        await _context.Casos.AddAsync(caso);
+        
+        await _context.Casos.AddAsync(data);
         await _context.SaveChangesAsync();
     }
 

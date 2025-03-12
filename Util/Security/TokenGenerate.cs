@@ -3,11 +3,11 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace CrudAPI.Util;
 
-public class TokenService
+public class TokenGenerate
 {
     private readonly IHttpContextAccessor _httpContextAccessor;
 
-    public TokenService(IHttpContextAccessor httpContextAccessor)
+    public TokenGenerate(IHttpContextAccessor httpContextAccessor)
     {
         _httpContextAccessor = httpContextAccessor;
     }

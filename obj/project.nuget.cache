@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "21WL1dS4rLQ=",
+  "dgSpecHash": "5LwXu5Vc4UA=",
   "success": true,
-  "projectFilePath": "D:\\rider-project\\CrudAPI\\CrudAPI.csproj",
+  "projectFilePath": "D:\\riderProject\\CrudAPI\\CrudAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Edu_o\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\Edu_o\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

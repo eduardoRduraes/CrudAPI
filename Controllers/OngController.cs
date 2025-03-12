@@ -1,5 +1,7 @@
 ﻿using CrudAPI.DTOs;
 using CrudAPI.Repositories;
+using CrudAPI.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CrudAPI.Controllers;
@@ -8,25 +10,25 @@ namespace CrudAPI.Controllers;
 public class OngController : ControllerBase
 {
     
-    private readonly OngRepository _ongRepository;
+    private readonly OngService _ongService;
 
-    public OngController(OngRepository ongRepository)
+    public OngController(OngService ongService)
     {
-        _ongRepository = ongRepository;
+        _ongService = ongService;
     }
 
     [HttpPost("add")]
     public async Task<IActionResult> Add([FromBody]OngDTO data)
     {
-        
-        await _ongRepository.Add(data);
+        await _ongService.Add(data);
         return Ok(new { message = $"Ong cadastrado com sucesso! {data.Nome}" });
     }
 
+    [Authorize]
     [HttpGet("get/{id}")]
     public async Task<IActionResult> Get(Guid id)
     {
-        var ong = await _ongRepository.Get(id);
+        var ong = await _ongService.Get(id);
         return Ok(ong);
     }
 }
